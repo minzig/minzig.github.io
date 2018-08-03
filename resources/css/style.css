@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body,html{width:100%;height:100%}body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:none;margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}ol,ul{list-style:none}hr{border:0;height:1px;background:#ccc}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{margin:0;padding:0;list-style:none;box-sizing:border-box}html,input,select,textarea,button,a{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+
+
+
+body {
+    padding: 90px 0 0 0;
+    min-width:255px;
+    width: auto !important;
+    width: 100%;
+    background: #fff;
+}
+
+footer {
+    min-width: 171px;
+    width: 60%;
+    height: 70px;
+    position: fixed;
+    margin-left: 20%;
+    margin-right: 20%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+   /*  background:  #14cba8; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+ 
+}
+
+footer button {
+    width: 54px;
+    height: 54px;
+    z-index: 9;
+
+    font-family: 'Montserrat';
+    font-size: 17px;
+    background: #64ffda;
+    border: 0px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+footer button:nth-child(3) {
+    float: right;
+    background: #9effff;
+    font-size: 18px;
+}
+
+
+
+header {
+    min-width:255px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #14cba8;
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    padding: 15px;
+
+
+}
+
+header input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    border: 0px;
+    color: #000;
+    padding: 0 60px 0 0;
+    outline: none;
+    text-indent: 18px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+
+    background-color: #fff;
+
+}
+
+header span input {
+    float: none;
+    width: 13px;
+    height: 13px;
+}
+
+header input::-webkit-input-placeholder {
+    font-family: 'Pacifico', cursive;
+    color: #14cba8;
+}
+
+header button {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    z-index: 2;
+
+    background: #64ffda;
+    border: 0px;
+    border-radius: 50%;
+
+}
+
+header button {
+    font-size: 24px;
+}
+
+li {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    background: #fff;
+    min-height: 50px;
+    border-radius: 5px;
+    width: 95%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-all;
+    /*word-wrap:break-word;*/
+    position: relative;
+    padding: 12px 55px 12px 12px;
+    text-align: left;
+}
+
+li button {
+    width: 15px;
+    height: 15px;
+    background: #b83fc5;
+    border: 0px;
+    border-radius: 15px;
+    float: left;
+    margin-left: 7px;
+
+
+}
+
+li button:nth-child(2) {
+    background: #14cba8;
+}
+
+.container {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+  }
+
+li .buttons {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+ul.todo#todo:empty:after {
+    content: "Es stehen (noch) keine Dinge auf deiner Liste.";
+    opacity: 0.6;
+    
+}
+
+/*
+ul#completed:not(:empty) {
+    opacity: 0.6;
+}
+*/
+
+ul.todo#completed {
+    position: relative;
+    padding: 30px 0 0 0;
+  }
+
+ul.todo#todo li {
+    background-color: #64ffda5c;
+    /* border: 1px solid rgb(190, 190, 190); */
+}
+
+ul#completed li {
+    background-color: #ededed85;
+    opacity: 0.6;
+ 
+}
+
+li .buttons {
+    opacity: 1.0;
+}
+li .buttons .remove {
+    opacity: 1.0;
+    z-index: 4;
+    background-color: #b83fc5;
+}
+
+/*
+li button:last-of-type:before {
+    content: '';
+    width: 0px;
+    height: 30px;
+    position: absolute;
+    top: -6px;
+    left: 22px;
+    background: darkslategray;
+}
+*/

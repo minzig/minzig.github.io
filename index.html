@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Tu dies, Tu das!</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+</head>
+<body>
+    <header>
+        <input type="text" placeholder="Was steht heute an?" id="item" autofocus>
+        <button id="add">+</button>
+
+    <!-- maybe later 
+        <span>Modus:
+            <label for="easy">Einfach</label>
+		    <input type="radio" id="ez" name="Modus" value="easy">
+        
+            <label for="advanced">Erweitert</label>
+		    <input type="radio" id="adv" name="Modus" value="advanced">
+        </span> 
+    -->
+
+    </header>
+    
+    <div class="container">
+        <ul class='todo' id="todo"></ul>
+
+        <ul class='todo' id="completed"></ul>
+    </div>
+    <footer>
+        <button id="import">Imp</button>
+        <button id="export">Exp</button>
+        <button id="clear">Clear</button>
+    </footer>
+    
+    <script src="resources/js/main.js"></script>
+</body>
+</html>
