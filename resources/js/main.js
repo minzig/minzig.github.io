@@ -62,10 +62,11 @@ function exportList() {
 function readFromFile (event) {
     var file = event.target.files;
     var reader = new FileReader();
-
+    console.log("readfromfile");
 
     
     reader.onload = function() {
+        console.log("onload");
         console.log("2. " + this.result);
         
         var importedData = this.result;
@@ -80,6 +81,7 @@ function readFromFile (event) {
         for (var i = 0; i < pimportedData.todo.length; i++) {
             var value = pimportedData.todo[i];
             addItem(value);
+
             // Storage
             data.todo.push(value);
             dataObjectUpdated();
@@ -87,31 +89,39 @@ function readFromFile (event) {
         for (var i = 0; i < pimportedData.done.length; i++) {
             var value = pimportedData.done[i];
             addItem(value, true);
+
             // Storage
             data.done.push(value);
             dataObjectUpdated();
         }
-        reader.readAsText(file[0]);
-
+        
     };
-
+    
+    reader.readAsText(file[0]);
 
 };
 
 
 
 function importList() {
+    
+
 
     // Creates an invisible FileUpload-Input 
     var invisibleUpload = document.createElement('input');
     invisibleUpload.setAttribute('type', 'file');
     invisibleUpload.setAttribute('id', 'IMP');
-
-    invisibleUpload.addEventListener("change", readFromFile, false);
-
+    console.log("pre.addEventListener");
+    invisibleUpload.addEventListener('change', readFromFile, false);
+    console.log("post.addEventListener");
     invisibleUpload.style.display = 'none';
+    console.log(invisibleUpload);
+    console.log(invisibleUpload.attributes);
     document.body.appendChild(invisibleUpload);
+
+    console.log("pre.Click");
     invisibleUpload.click();
+    console.log("post.Click");
     document.body.removeChild(invisibleUpload);
 
 
