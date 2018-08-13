@@ -174,9 +174,9 @@ function setFocusToTextBox(){
 
 function buttonClick() {
     var value = document.getElementById('item').value;
-
+    var maxCharacters = 750;
     // if value is not null
-    if (value) {
+    if (value && value.length < maxCharacters) {
 
         // storage
         data.todo.push(value);
@@ -190,6 +190,11 @@ function buttonClick() {
         setFocusToTextBox();
 
     }
+
+    if (value.length > maxCharacters) {
+    	alert("Fass dich kurz, Jan!");
+    }
+    setFocusToTextBox();
 };
 
 function removeItem() {

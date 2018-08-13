@@ -144,6 +144,7 @@ li button {
     border-radius: 15px;
     float: left;
     margin-left: 7px;
+    cursor: pointer;
 
 
 }
